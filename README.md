@@ -2,6 +2,7 @@
 
 ## Description
 
+This is a command line professional README generator that will create a markdown file for future project READMEs. It will ask a series of questions like project title, description, how to install it, how to use it, collaborators, what license to use, github username, email, and tests. 
 
 
 ## Table of Contents 
@@ -13,37 +14,21 @@
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To run this project, you will need to install Node.js V16.16.0. You will also need to install inquirer V8.2.4.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Simply run the application in Node.js and follow the prompts provided.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+This is a demo of running the program in the command line and can be viewed at the Google drive link:
 
 
 ## License
 N/A
 
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Features
-
-If your project has a lot of features, list them here.
-
 ## How to Contribute
 
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
 
-## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+

@@ -20,7 +20,7 @@ To run this project, you will need to install Node.js V16.16.0. You will also ne
 
 Simply run the application in Node.js and follow the prompts provided.
 
-This is a demo of running the program in the command line and can be viewed at the Google drive link:
+This is a demo of running the program in the command line and can be viewed at the Google drive link: https://drive.google.com/file/d/1zaWE7McrjGJo39p2RUMTxORg1I0hWafm/view
 
 
 ## License

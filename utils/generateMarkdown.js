@@ -14,13 +14,13 @@ function renderLicenseLink(license) {
     case 'MIT':
       return 'https://opensource.org/licenses/MIT';
     case 'Apache':
-      return 'https://opensource.org/licenses/Apache-2.0'
+      return 'https://opensource.org/licenses/Apache-2.0';
     case 'Mozilla-Public':
-      return 'https://opensource.org/licenses/MPL-2.0'
+      return 'https://opensource.org/licenses/MPL-2.0';
       case 'GNU-GPL v3':
-        return 'https://www.gnu.org/licenses/gpl-3.0'
+        return 'https://www.gnu.org/licenses/gpl-3.0';
       case 'ISC':
-        return 'https://opensource.org/licenses/ISC'
+        return 'https://opensource.org/licenses/ISC';
     default:
       return '';
   }
@@ -30,8 +30,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== "None") {
-    return `
-    This application is covered by the ${license} license.`
+    return `This application is covered by the ${license} license.`
   }
   return ``;
 }
@@ -39,11 +38,13 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-  #  ${data.title}
-  ${renderLicenseBadge(data.license)}
 
-  ## Description
-  ${data.description}
+# ${data.title}
+  
+
+## Description
+
+${data.description}
 
 ## Table of Content
 - [Installation](#installation)
@@ -54,25 +55,40 @@ function generateMarkdown(data) {
 - [Questions](#questions)
 
 
-  ## Installation:
-  ${data.installation}
+## Installation:
 
-  ## Usage:
-  ${data.usage}
+${data.installation}
 
-  ## License:
-  ${renderLicenseLink(data.license)}
-  ${renderLicenseSection(data.license)}
+## Usage:
 
-  ## Contribution:
-  ${data.contributing}
+${data.usage}
 
-  ## Testing:
-  ${data.testing}
+## License:
 
-  ## Additional Info:
-  - Github: [${data.username}](https://github.com/${data.username})
-  - Email: ${data.email} `;
+${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)}
+
+-----
+
+## Badges:
+
+${renderLicenseBadge(data.license)}
+
+
+## Contribution:
+
+${data.contributing}
+
+
+## Testing:
+
+${data.testing}
+
+
+## Additional Info:
+
+- Github: [${data.username}](https://github.com/${data.username})
+- Email: ${data.email} `;
 
 }
 

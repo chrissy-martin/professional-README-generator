@@ -42,7 +42,7 @@ const questions = [
       type: 'list',
       name: 'license',
       message: 'Did you use any of the following licenses on your project?',
-      choices: [ 'Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'ISC', 'None'],
+      choices: [ 'Apache', 'MIT', 'Mozilla-Public', 'GNU-GPL v3', 'ISC', 'None'],
     },
     {
       type: 'input',

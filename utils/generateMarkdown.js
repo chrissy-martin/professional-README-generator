@@ -17,7 +17,7 @@ function renderLicenseLink(license) {
       return 'https://opensource.org/licenses/Apache-2.0'
     case 'Mozilla-Public':
       return 'https://opensource.org/licenses/MPL-2.0'
-      case 'GNU-General-Public':
+      case 'GNU-GPL v3':
         return 'https://www.gnu.org/licenses/gpl-3.0'
       case 'ISC':
         return 'https://opensource.org/licenses/ISC'

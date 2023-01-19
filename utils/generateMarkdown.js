@@ -10,17 +10,27 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license !== "None") {
-    return `- [License](#license)`
+  switch (license) {
+    case 'MIT':
+      return 'https://opensource.org/licenses/MIT';
+    case 'Apache':
+      return 'https://opensource.org/licenses/Apache-2.0'
+    case 'Mozilla-Public':
+      return 'https://opensource.org/licenses/MPL-2.0'
+      case 'GNU-General-Public':
+        return 'https://www.gnu.org/licenses/gpl-3.0'
+      case 'ISC':
+        return 'https://opensource.org/licenses/ISC'
+    default:
+      return '';
   }
-  return ``;
-}
+  }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license !== "None") {
-    return `## License
+    return `
     This application is covered by the ${license} license.`
   }
   return ``;
@@ -38,7 +48,7 @@ function generateMarkdown(data) {
 ## Table of Content
 - [Installation](#installation)
 - [Usage](#usage)
-${renderLicenseLink(data.license)}
+- [License](#license)
 - [Contributing](#contributing)
 - [Test](#Test)
 - [Questions](#questions)
@@ -51,6 +61,7 @@ ${renderLicenseLink(data.license)}
   ${data.usage}
 
   ## License:
+  ${renderLicenseLink(data.license)}
   ${renderLicenseSection(data.license)}
 
   ## Contribution:

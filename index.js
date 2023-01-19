@@ -7,8 +7,7 @@ const generateMarkdown = require('./utils/generateMarkdown');
 
 //  questions for user input
 
-inquirer
-  .prompt([
+const questions = [
     {
       type: 'input',
       name: 'title',
@@ -43,7 +42,7 @@ inquirer
       type: 'list',
       name: 'license',
       message: 'Did you use any of the following licenses on your project?',
-      choices: [ 'Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution', 'None'],
+      choices: [ 'Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'ISC', 'None'],
     },
     {
       type: 'input',
@@ -55,26 +54,32 @@ inquirer
       name: 'email',
       message: 'What is your email address?',
     },
-  ])
+  ];
 
   
 
 // function to write README file
-//function writeToFile(fileName, data) {}
-.then((data) => {
-    const filename = data.title.replace(' ', "").toLowerCase()
-    fs.writeFile(`${filename}.md`, generateMarkdown(data), (err) =>
-        err ? console.error(err) : console.log('Your Professional README is generated!'))
-})
+function writeToFile(fileName, data) {
+  fs.writeFile(`${fileName}.md`, generateMarkdown(data), "utf8", function (error) {
+      if (error) {
+          console.log(error);
+      } else {
+          console.log(`Congratulations! Your README has been saved to ${fileName}.md.`);
+      }
+  });
+}
 
 //  function to initialize app
 function init() {
-  inquirer.prompt(questions)
-  .then(function (userInput) {
-      console.log(userInput)
-      writeToFile("README.md", generateMarkdown(userInput));
-  });
-};
+  inquirer
+      .prompt(questions)
+      .then((response) => {
+          writeToFile(response.title, response);
+      })
+      .catch((error) => {
+          console.log(error);
+      })
+}
 
 
 // Function call to initialize app

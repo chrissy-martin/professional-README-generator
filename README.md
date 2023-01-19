@@ -27,7 +27,7 @@ This is a demo of running the program in the command line and can be viewed at t
 N/A
 
 
-## How to Contribute
+
 
 
 

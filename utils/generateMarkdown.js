@@ -50,8 +50,8 @@ ${data.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Contributing](#contributing)
-- [Test](#Test)
+- [Contribution](#contribution)
+- [Testing](#testing)
 - [Questions](#questions)
 
 
@@ -85,7 +85,7 @@ ${data.contributing}
 ${data.testing}
 
 
-## Additional Info:
+## Questions:
 
 - Github: [${data.username}](https://github.com/${data.username})
 - Email: ${data.email} `;
